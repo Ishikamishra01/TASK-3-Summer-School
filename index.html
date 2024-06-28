@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+        <form id="courseForm">
+            <label for="totalCourses">Enter total number of courses: </label>
+            <input type="number" id="totalCourses" name="totalCourses" min="1" required>
+            <button type="button" onclick="generateCourseFields()">Submit</button>
+        </form>
+
+        <form id="gradesForm" style="display:none;">
+            <div id="courseFields"></div>
+            <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
+        </form>
+
+        <div id="result" style="display:none;">
+            <h2>Your CGPA is: <span id="cgpa"></span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
